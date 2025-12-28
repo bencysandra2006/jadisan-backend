@@ -7,7 +7,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 audio_path = sys.argv[1]
 
-model = whisper.load_model("small")
+model = whisper.load_model("tiny")
 result = model.transcribe(
     audio_path,
     task="transcribe"
