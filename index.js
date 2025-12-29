@@ -17,6 +17,10 @@ const ACCOUNT_SID = process.env.ACCOUNT_SID;
 const AUTH_TOKEN = process.env.AUTH_TOKEN;
 const client = twilio(ACCOUNT_SID, AUTH_TOKEN);
 
+app.get("/whatsapp", (req, res) => {
+  res.status(200).send("JadiSan Bot is Online and Awake!");
+});
+
 app.post("/whatsapp", async (req, res) => {
   console.log("Incoming:", req.body);
 
